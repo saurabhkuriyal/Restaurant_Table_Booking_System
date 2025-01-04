@@ -4,7 +4,7 @@ const connection=require("./utils/db");
 const bodyParser = require("body-parser");
 const booking=require("./routers/booking.routes");
 const cors=require("cors");
-const path = require('path');
+const path = require("path");
 
 
 const app=express();
@@ -23,6 +23,6 @@ app.use(booking);
 //listening port
 connection().then(() => {
     app.listen(port,()=>{
-        //console.log("Table booking system server is running");
+        console.log("Table booking system server is running");
     });
 })

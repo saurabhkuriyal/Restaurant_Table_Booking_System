@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 
-const Uri="mongodb://localhost:27017/TicketBookingSystem";
+const Uri=process.env.MONGODN_URI;
 
 async function connection() {
     try {

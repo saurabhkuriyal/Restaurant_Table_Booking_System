@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express=require("express");
 const connection=require("./utils/db");
 const bodyParser = require("body-parser");
@@ -5,7 +6,7 @@ const booking=require("./routers/booking.routes");
 const cors=require("cors");
 const app=express();
 
-const port=3000;
+const port=process.env.PORT;
 
 //middlewares
 app.use(cors());

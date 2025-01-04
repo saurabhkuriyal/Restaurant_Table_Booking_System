@@ -1,4 +1,8 @@
-function BookingPopup({ onClose }) {
+function BookingPopup({ onClose,data }) {
+
+    
+    const { name, email, contact, date, time, guests } = data;
+
     return (
         <div style={{
             position: "fixed",
@@ -19,8 +23,11 @@ function BookingPopup({ onClose }) {
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
             }}>
                 <h3>Booking Confirmed!</h3>
-                <p>Thank you for booking. Please fill in the additional details if required.</p>
-                <button 
+                <p>Name : {name}</p>
+                <p>Contact : {contact}</p>
+                <p> date: {date}</p>
+                <p> time : {time}</p>
+                <button
                     onClick={onClose} 
                     style={{ marginTop: "10px", padding: "10px 20px", backgroundColor: "#007bff", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" }}
                 >

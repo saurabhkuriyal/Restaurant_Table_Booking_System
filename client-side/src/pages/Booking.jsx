@@ -79,14 +79,18 @@ export default function Booking() {
             setPopUp(true);
             console.log(response);
             
-        } catch (error) {
-            console.log(error);
             
+        } catch (error) {
+            // console.log(error);
+            console.log("This is status",error.response.status);
+            if(error.response.status==400){
+                alert("This slot is already booked");
+            }
         }
     }
 
     return ( <div>
-        {popUp && <BookingPopup onClose={() => setPopUp(false)} />}
+        {popUp && <BookingPopup data={formData} onClose={() => setPopUp(false)} />}
         <div className="container w-50 my-5">
             <div className="form">
                 <form action="" onSubmit={handleSubmit} className="row g-3">

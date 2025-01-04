@@ -1,27 +1,11 @@
 function BookingPopup({ onClose,data }) {
 
-    
+    //destructuring the data object
     const { name, email, contact, date, time, guests } = data;
 
     return (
-        <div style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-        }}>
-            <div style={{
-                backgroundColor: "white",
-                padding: "20px",
-                borderRadius: "10px",
-                textAlign: "center",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-            }}>
+        <div className="container bookingpepup">
+            <div className="inner-container" >
                 <h3>Booking Confirmed!</h3>
                 <p>Name : {name}</p>
                 <p>Contact : {contact}</p>

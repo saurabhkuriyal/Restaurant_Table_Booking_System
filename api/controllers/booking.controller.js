@@ -20,12 +20,12 @@ async function book(req, res) {
 
         await newBooking.save();
 
-        console.log("hello from booking", newBooking);
+        //console.log("hello from booking", newBooking);
 
         res.status(200).json({ success: true })
 
     } catch (error) {
-        console.log(error);
+        //console.log(error);
         res.status(500).json({ success: false, error })
     }
 }
@@ -38,7 +38,7 @@ async function getBookings(req, res) {
         res.status(200).json({ success: true, data: allBookings });
 
     } catch (error) {
-        console.log(error);
+        //console.log(error);
         res.status(400).json({ success: false, error })
 
     }

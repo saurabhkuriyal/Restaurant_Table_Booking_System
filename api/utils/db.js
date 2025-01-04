@@ -5,10 +5,10 @@ const Uri=process.env.MONGODN_URI;
 async function connection() {
     try {
         await mongoose.connect(Uri);
-        console.log("Connection to database is successful");
+        //console.log("Connection to database is successful");
         
     } catch (error) {
-        console.log(error);
+        //console.log(error);
     }
 }
 
